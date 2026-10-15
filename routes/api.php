@@ -13,6 +13,8 @@ Route::get('/user', function (Request $request) {
 Route::prefix('kpi')->group(function () {
     Route::get('/index', [KpiControllers::class, 'index']);
     Route::post('/store', [KpiControllers::class, 'store']);
+    Route::get('/show/{id}', [KpiControllers::class, 'show']);
+    Route::put('/update/{id}', [KpiControllers::class, 'update']);
     Route::delete('/delete/{id}', [KpiControllers::class, 'delete']);
 });
 
